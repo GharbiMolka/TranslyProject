@@ -1,0 +1,565 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\USER\\Desktop\\Transly\\Backend\\TranslyProject\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\USER\\Desktop\\Transly\\Backend\\TranslyProject\\TranslyProject\\Controllers\\AuthController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TranslyProject\\Controllers\\AuthController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\USER\\source\\repos\\TranslyProject\\TranslyProject\\Migrations\\20250709154111_mg1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\USER\\Desktop\\Transly\\Backend\\TranslyProject\\TranslyProject\\Models\\PasswordResetRequestDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TranslyProject\\Models\\PasswordResetRequestDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\USER\\Desktop\\Transly\\Backend\\TranslyProject\\TranslyProject\\Models\\PasswordResetToken.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TranslyProject\\Models\\PasswordResetToken.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\USER\\Desktop\\Transly\\Backend\\TranslyProject\\TranslyProject\\Controllers\\FournisseurController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TranslyProject\\Controllers\\FournisseurController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\USER\\Desktop\\Transly\\Backend\\TranslyProject\\TranslyProject\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TranslyProject\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\USER\\Desktop\\Transly\\Backend\\TranslyProject\\TranslyProject\\Services\\IEmailService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TranslyProject\\Services\\IEmailService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\USER\\Desktop\\Transly\\Backend\\TranslyProject\\TranslyProject\\Services\\EmailService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TranslyProject\\Services\\EmailService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\USER\\Desktop\\Transly\\Backend\\TranslyProject\\TranslyProject\\Migrations\\20250724201718_mg10.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TranslyProject\\Migrations\\20250724201718_mg10.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\USER\\Desktop\\Transly\\Backend\\TranslyProject\\TranslyProject\\Models\\User.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TranslyProject\\Models\\User.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\USER\\Desktop\\Transly\\Backend\\TranslyProject\\TranslyProject\\Data\\ApplicationDbContext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TranslyProject\\Data\\ApplicationDbContext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\USER\\Desktop\\Transly\\Backend\\TranslyProject\\TranslyProject\\Controllers\\DemandeApiController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TranslyProject\\Controllers\\DemandeApiController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\USER\\Desktop\\Transly\\Backend\\TranslyProject\\TranslyProject\\Controllers\\CommandeApiController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TranslyProject\\Controllers\\CommandeApiController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\USER\\Desktop\\Transly\\Backend\\TranslyProject\\TranslyProject\\Controllers\\OffreApiController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TranslyProject\\Controllers\\OffreApiController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\USER\\Desktop\\Transly\\Backend\\TranslyProject\\TranslyProject\\Migrations\\20250716220810_mg8.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TranslyProject\\Migrations\\20250716220810_mg8.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\USER\\Desktop\\Transly\\Backend\\TranslyProject\\TranslyProject\\Models\\OffreDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TranslyProject\\Models\\OffreDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\USER\\Desktop\\Transly\\Backend\\TranslyProject\\TranslyProject\\Models\\Demande.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TranslyProject\\Models\\Demande.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\USER\\Desktop\\Transly\\Backend\\TranslyProject\\TranslyProject\\Models\\Offre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TranslyProject\\Models\\Offre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\USER\\Desktop\\Transly\\Backend\\TranslyProject\\TranslyProject\\Models\\CommandeDTO.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TranslyProject\\Models\\CommandeDTO.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\USER\\Desktop\\Transly\\Backend\\TranslyProject\\TranslyProject\\Models\\UserDTO.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TranslyProject\\Models\\UserDTO.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\USER\\Desktop\\Transly\\Backend\\TranslyProject\\TranslyProject\\Controllers\\UserController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TranslyProject\\Controllers\\UserController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\USER\\Desktop\\Transly\\Backend\\TranslyProject\\TranslyProject\\Models\\DemandeDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TranslyProject\\Models\\DemandeDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\USER\\Desktop\\Transly\\Backend\\TranslyProject\\TranslyProject\\Migrations\\20250715114105_mg7.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TranslyProject\\Migrations\\20250715114105_mg7.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\USER\\Desktop\\Transly\\Backend\\TranslyProject\\TranslyProject\\Models\\Commande.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TranslyProject\\Models\\Commande.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\USER\\Desktop\\Transly\\Backend\\TranslyProject\\TranslyProject\\Controllers\\ClientController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TranslyProject\\Controllers\\ClientController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\USER\\Desktop\\Transly\\Backend\\TranslyProject\\TranslyProject\\Migrations\\20250709205410_mg5.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TranslyProject\\Migrations\\20250709205410_mg5.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\USER\\Desktop\\Transly\\Backend\\TranslyProject\\TranslyProject\\Migrations\\20250709204618_mg4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TranslyProject\\Migrations\\20250709204618_mg4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\USER\\Desktop\\Transly\\Backend\\TranslyProject\\TranslyProject\\Controllers\\TransporteurController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TranslyProject\\Controllers\\TransporteurController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\USER\\Desktop\\Transly\\Backend\\TranslyProject\\TranslyProject\\Migrations\\20250709202858_mg3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TranslyProject\\Migrations\\20250709202858_mg3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\USER\\Desktop\\Transly\\Backend\\TranslyProject\\TranslyProject\\Migrations\\20250709190824_mg2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TranslyProject\\Migrations\\20250709190824_mg2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\USER\\Desktop\\Transly\\Backend\\TranslyProject\\TranslyProject\\Models\\JwtHelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TranslyProject\\Models\\JwtHelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\USER\\Desktop\\Transly\\Backend\\TranslyProject\\TranslyProject\\Controllers\\HomeController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TranslyProject\\Controllers\\HomeController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\USER\\Desktop\\Transly\\Backend\\TranslyProject\\TranslyProject\\Models\\LoginDTO.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TranslyProject\\Models\\LoginDTO.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\USER\\Desktop\\Transly\\Backend\\TranslyProject\\TranslyProject\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TranslyProject\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "20250709154111_mg1.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\TranslyProject\\TranslyProject\\Migrations\\20250709154111_mg1.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\source\\repos\\TranslyProject\\TranslyProject\\Migrations\\20250709154111_mg1.cs",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\TranslyProject\\TranslyProject\\Migrations\\20250709154111_mg1.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\source\\repos\\TranslyProject\\TranslyProject\\Migrations\\20250709154111_mg1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-09T15:41:12.511Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PasswordResetRequestDto.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Transly\\Backend\\TranslyProject\\TranslyProject\\Models\\PasswordResetRequestDto.cs",
+              "RelativeDocumentMoniker": "TranslyProject\\Models\\PasswordResetRequestDto.cs",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\Transly\\Backend\\TranslyProject\\TranslyProject\\Models\\PasswordResetRequestDto.cs",
+              "RelativeToolTip": "TranslyProject\\Models\\PasswordResetRequestDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-28T12:18:00.032Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PasswordResetToken.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Transly\\Backend\\TranslyProject\\TranslyProject\\Models\\PasswordResetToken.cs",
+              "RelativeDocumentMoniker": "TranslyProject\\Models\\PasswordResetToken.cs",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\Transly\\Backend\\TranslyProject\\TranslyProject\\Models\\PasswordResetToken.cs",
+              "RelativeToolTip": "TranslyProject\\Models\\PasswordResetToken.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-24T20:15:24.771Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FournisseurController.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Transly\\Backend\\TranslyProject\\TranslyProject\\Controllers\\FournisseurController.cs",
+              "RelativeDocumentMoniker": "TranslyProject\\Controllers\\FournisseurController.cs",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\Transly\\Backend\\TranslyProject\\TranslyProject\\Controllers\\FournisseurController.cs",
+              "RelativeToolTip": "TranslyProject\\Controllers\\FournisseurController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-09T18:42:55.237Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Transly\\Backend\\TranslyProject\\TranslyProject\\Program.cs",
+              "RelativeDocumentMoniker": "TranslyProject\\Program.cs",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\Transly\\Backend\\TranslyProject\\TranslyProject\\Program.cs",
+              "RelativeToolTip": "TranslyProject\\Program.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAADoAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-09T14:42:20.768Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Transly\\Backend\\TranslyProject\\TranslyProject\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "TranslyProject\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\Transly\\Backend\\TranslyProject\\TranslyProject\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "TranslyProject\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAALYAAAAAAAAAAAD4v74AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-09T15:56:17.486Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IEmailService.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Transly\\Backend\\TranslyProject\\TranslyProject\\Services\\IEmailService.cs",
+              "RelativeDocumentMoniker": "TranslyProject\\Services\\IEmailService.cs",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\Transly\\Backend\\TranslyProject\\TranslyProject\\Services\\IEmailService.cs",
+              "RelativeToolTip": "TranslyProject\\Services\\IEmailService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-26T10:23:50.358Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "EmailService.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Transly\\Backend\\TranslyProject\\TranslyProject\\Services\\EmailService.cs",
+              "RelativeDocumentMoniker": "TranslyProject\\Services\\EmailService.cs",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\Transly\\Backend\\TranslyProject\\TranslyProject\\Services\\EmailService.cs",
+              "RelativeToolTip": "TranslyProject\\Services\\EmailService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-26T10:24:37.981Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "20250724201718_mg10.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Transly\\Backend\\TranslyProject\\TranslyProject\\Migrations\\20250724201718_mg10.cs",
+              "RelativeDocumentMoniker": "TranslyProject\\Migrations\\20250724201718_mg10.cs",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\Transly\\Backend\\TranslyProject\\TranslyProject\\Migrations\\20250724201718_mg10.cs",
+              "RelativeToolTip": "TranslyProject\\Migrations\\20250724201718_mg10.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-24T20:17:19.121Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Transly\\Backend\\TranslyProject\\TranslyProject\\Models\\User.cs",
+              "RelativeDocumentMoniker": "TranslyProject\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\Transly\\Backend\\TranslyProject\\TranslyProject\\Models\\User.cs",
+              "RelativeToolTip": "TranslyProject\\Models\\User.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAzwC8AAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-09T14:57:46.097Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Transly\\Backend\\TranslyProject\\TranslyProject\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "TranslyProject\\Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\Transly\\Backend\\TranslyProject\\TranslyProject\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "TranslyProject\\Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-09T14:54:59.259Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "DemandeApiController.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Transly\\Backend\\TranslyProject\\TranslyProject\\Controllers\\DemandeApiController.cs",
+              "RelativeDocumentMoniker": "TranslyProject\\Controllers\\DemandeApiController.cs",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\Transly\\Backend\\TranslyProject\\TranslyProject\\Controllers\\DemandeApiController.cs",
+              "RelativeToolTip": "TranslyProject\\Controllers\\DemandeApiController.cs",
+              "ViewState": "AgIAAJcAAAAAAAAAAAAwwKoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-14T14:27:25.276Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "CommandeApiController.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Transly\\Backend\\TranslyProject\\TranslyProject\\Controllers\\CommandeApiController.cs",
+              "RelativeDocumentMoniker": "TranslyProject\\Controllers\\CommandeApiController.cs",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\Transly\\Backend\\TranslyProject\\TranslyProject\\Controllers\\CommandeApiController.cs",
+              "RelativeToolTip": "TranslyProject\\Controllers\\CommandeApiController.cs",
+              "ViewState": "AgIAAJcAAAAAAAAAAADwv6oAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-09T20:22:59.716Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "OffreApiController.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Transly\\Backend\\TranslyProject\\TranslyProject\\Controllers\\OffreApiController.cs",
+              "RelativeDocumentMoniker": "TranslyProject\\Controllers\\OffreApiController.cs",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\Transly\\Backend\\TranslyProject\\TranslyProject\\Controllers\\OffreApiController.cs",
+              "RelativeToolTip": "TranslyProject\\Controllers\\OffreApiController.cs",
+              "ViewState": "AgIAAJIAAAAAAAAAAAAIwKQAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-16T21:02:07.18Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "20250716220810_mg8.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Transly\\Backend\\TranslyProject\\TranslyProject\\Migrations\\20250716220810_mg8.cs",
+              "RelativeDocumentMoniker": "TranslyProject\\Migrations\\20250716220810_mg8.cs",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\Transly\\Backend\\TranslyProject\\TranslyProject\\Migrations\\20250716220810_mg8.cs",
+              "RelativeToolTip": "TranslyProject\\Migrations\\20250716220810_mg8.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-16T22:08:11.322Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "OffreDto.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Transly\\Backend\\TranslyProject\\TranslyProject\\Models\\OffreDto.cs",
+              "RelativeDocumentMoniker": "TranslyProject\\Models\\OffreDto.cs",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\Transly\\Backend\\TranslyProject\\TranslyProject\\Models\\OffreDto.cs",
+              "RelativeToolTip": "TranslyProject\\Models\\OffreDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-16T22:12:10.202Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Demande.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Transly\\Backend\\TranslyProject\\TranslyProject\\Models\\Demande.cs",
+              "RelativeDocumentMoniker": "TranslyProject\\Models\\Demande.cs",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\Transly\\Backend\\TranslyProject\\TranslyProject\\Models\\Demande.cs",
+              "RelativeToolTip": "TranslyProject\\Models\\Demande.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAowCcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-09T15:00:23.016Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Offre.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Transly\\Backend\\TranslyProject\\TranslyProject\\Models\\Offre.cs",
+              "RelativeDocumentMoniker": "TranslyProject\\Models\\Offre.cs",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\Transly\\Backend\\TranslyProject\\TranslyProject\\Models\\Offre.cs",
+              "RelativeToolTip": "TranslyProject\\Models\\Offre.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAgwB4AAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-09T15:00:53.158Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "CommandeDTO.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Transly\\Backend\\TranslyProject\\TranslyProject\\Models\\CommandeDTO.cs",
+              "RelativeDocumentMoniker": "TranslyProject\\Models\\CommandeDTO.cs",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\Transly\\Backend\\TranslyProject\\TranslyProject\\Models\\CommandeDTO.cs",
+              "RelativeToolTip": "TranslyProject\\Models\\CommandeDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-09T20:20:35.26Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "UserDTO.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Transly\\Backend\\TranslyProject\\TranslyProject\\Models\\UserDTO.cs",
+              "RelativeDocumentMoniker": "TranslyProject\\Models\\UserDTO.cs",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\Transly\\Backend\\TranslyProject\\TranslyProject\\Models\\UserDTO.cs",
+              "RelativeToolTip": "TranslyProject\\Models\\UserDTO.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAkwCMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-09T14:58:28.415Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Transly\\Backend\\TranslyProject\\TranslyProject\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "TranslyProject\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\Transly\\Backend\\TranslyProject\\TranslyProject\\Controllers\\UserController.cs",
+              "RelativeToolTip": "TranslyProject\\Controllers\\UserController.cs",
+              "ViewState": "AgIAADUAAAAAAAAAAAAgwA0AAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-09T18:37:13.337Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "DemandeDto.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Transly\\Backend\\TranslyProject\\TranslyProject\\Models\\DemandeDto.cs",
+              "RelativeDocumentMoniker": "TranslyProject\\Models\\DemandeDto.cs",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\Transly\\Backend\\TranslyProject\\TranslyProject\\Models\\DemandeDto.cs",
+              "RelativeToolTip": "TranslyProject\\Models\\DemandeDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-15T10:11:02.702Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "20250715114105_mg7.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Transly\\Backend\\TranslyProject\\TranslyProject\\Migrations\\20250715114105_mg7.cs",
+              "RelativeDocumentMoniker": "TranslyProject\\Migrations\\20250715114105_mg7.cs",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\Transly\\Backend\\TranslyProject\\TranslyProject\\Migrations\\20250715114105_mg7.cs",
+              "RelativeToolTip": "TranslyProject\\Migrations\\20250715114105_mg7.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-15T11:41:05.9Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Commande.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Transly\\Backend\\TranslyProject\\TranslyProject\\Models\\Commande.cs",
+              "RelativeDocumentMoniker": "TranslyProject\\Models\\Commande.cs",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\Transly\\Backend\\TranslyProject\\TranslyProject\\Models\\Commande.cs",
+              "RelativeToolTip": "TranslyProject\\Models\\Commande.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAYwBoAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-09T15:00:41.723Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "ClientController.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Transly\\Backend\\TranslyProject\\TranslyProject\\Controllers\\ClientController.cs",
+              "RelativeDocumentMoniker": "TranslyProject\\Controllers\\ClientController.cs",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\Transly\\Backend\\TranslyProject\\TranslyProject\\Controllers\\ClientController.cs",
+              "RelativeToolTip": "TranslyProject\\Controllers\\ClientController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-09T18:42:37.588Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "20250709205410_mg5.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Transly\\Backend\\TranslyProject\\TranslyProject\\Migrations\\20250709205410_mg5.cs",
+              "RelativeDocumentMoniker": "TranslyProject\\Migrations\\20250709205410_mg5.cs",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\Transly\\Backend\\TranslyProject\\TranslyProject\\Migrations\\20250709205410_mg5.cs",
+              "RelativeToolTip": "TranslyProject\\Migrations\\20250709205410_mg5.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-09T20:54:10.356Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "20250709204618_mg4.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Transly\\Backend\\TranslyProject\\TranslyProject\\Migrations\\20250709204618_mg4.cs",
+              "RelativeDocumentMoniker": "TranslyProject\\Migrations\\20250709204618_mg4.cs",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\Transly\\Backend\\TranslyProject\\TranslyProject\\Migrations\\20250709204618_mg4.cs",
+              "RelativeToolTip": "TranslyProject\\Migrations\\20250709204618_mg4.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-09T20:46:18.461Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "TransporteurController.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Transly\\Backend\\TranslyProject\\TranslyProject\\Controllers\\TransporteurController.cs",
+              "RelativeDocumentMoniker": "TranslyProject\\Controllers\\TransporteurController.cs",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\Transly\\Backend\\TranslyProject\\TranslyProject\\Controllers\\TransporteurController.cs",
+              "RelativeToolTip": "TranslyProject\\Controllers\\TransporteurController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-09T18:43:18.635Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "20250709202858_mg3.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Transly\\Backend\\TranslyProject\\TranslyProject\\Migrations\\20250709202858_mg3.cs",
+              "RelativeDocumentMoniker": "TranslyProject\\Migrations\\20250709202858_mg3.cs",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\Transly\\Backend\\TranslyProject\\TranslyProject\\Migrations\\20250709202858_mg3.cs",
+              "RelativeToolTip": "TranslyProject\\Migrations\\20250709202858_mg3.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-09T20:29:01.145Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "20250709190824_mg2.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Transly\\Backend\\TranslyProject\\TranslyProject\\Migrations\\20250709190824_mg2.cs",
+              "RelativeDocumentMoniker": "TranslyProject\\Migrations\\20250709190824_mg2.cs",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\Transly\\Backend\\TranslyProject\\TranslyProject\\Migrations\\20250709190824_mg2.cs",
+              "RelativeToolTip": "TranslyProject\\Migrations\\20250709190824_mg2.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-09T19:08:24.869Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "JwtHelper.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Transly\\Backend\\TranslyProject\\TranslyProject\\Models\\JwtHelper.cs",
+              "RelativeDocumentMoniker": "TranslyProject\\Models\\JwtHelper.cs",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\Transly\\Backend\\TranslyProject\\TranslyProject\\Models\\JwtHelper.cs",
+              "RelativeToolTip": "TranslyProject\\Models\\JwtHelper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-09T14:59:34.323Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Transly\\Backend\\TranslyProject\\TranslyProject\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "TranslyProject\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\Transly\\Backend\\TranslyProject\\TranslyProject\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "TranslyProject\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-09T18:34:31.414Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "LoginDTO.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Transly\\Backend\\TranslyProject\\TranslyProject\\Models\\LoginDTO.cs",
+              "RelativeDocumentMoniker": "TranslyProject\\Models\\LoginDTO.cs",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\Transly\\Backend\\TranslyProject\\TranslyProject\\Models\\LoginDTO.cs",
+              "RelativeToolTip": "TranslyProject\\Models\\LoginDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-09T14:59:05.59Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Transly\\Backend\\TranslyProject\\TranslyProject\\appsettings.json",
+              "RelativeDocumentMoniker": "TranslyProject\\appsettings.json",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\Transly\\Backend\\TranslyProject\\TranslyProject\\appsettings.json",
+              "RelativeToolTip": "TranslyProject\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAABWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-07-09T14:42:22.708Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
