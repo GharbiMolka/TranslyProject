@@ -1,0 +1,13 @@
+# Backend (.NET)
+backend/bin/
+backend/obj/
+*.user
+*.suo
+
+# Frontend (Angular)
+Front/transly-frontend/node_modules/
+Front/transly-frontend/dist/
+
+# General
+.DS_Store
+.env
