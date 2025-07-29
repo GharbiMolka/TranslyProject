@@ -1,0 +1,32 @@
+<h2 style="text-align: center; color: red;">Modifier votre profil</h2>
+
+<form [formGroup]="editForm" (ngSubmit)="onSubmit()" class="edit-user-form">
+  <label for="nom">Nom</label>
+  <input id="nom" formControlName="nom" type="text" />
+
+  <label for="prenom">Prénom</label>
+  <input id="prenom" formControlName="prenom" type="text" />
+
+  <label for="email">Email</label>
+  <input id="email" formControlName="email" type="email" />
+
+  <label for="mdp">Mot de passe</label>
+  <input id="mdp" formControlName="mdp" type="password" />
+
+  <label for="adresse">Adresse</label>
+  <input id="adresse" formControlName="adresse" type="text" />
+
+  <label for="gouvernorat">Gouvernorat</label>
+  <input id="gouvernorat" formControlName="gouvernorat" type="text" />
+
+  <label for="ville">Ville</label>
+  <input id="ville" formControlName="ville" type="text" />
+
+  <label for="role">Rôle</label>
+  <input id="role" formControlName="role" type="text" />
+
+  <label for="tel">Téléphone</label>
+  <input id="tel" formControlName="tel" type="text" />
+
+  <button type="submit" [disabled]="editForm.invalid">Mettre à jour</button>
+</form>

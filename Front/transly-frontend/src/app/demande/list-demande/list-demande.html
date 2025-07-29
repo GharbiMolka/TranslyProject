@@ -1,0 +1,147 @@
+<ng-container *ngIf="demandes.length > 0; else noData">
+  <h1 style="color: #ed1c24; text-align: center;">Liste des Demandes</h1>
+  <div class="filters" style="margin-left: 30%; margin-top:2%;">
+  <input
+    type="text"
+    placeholder="Rechercher une adresse..."
+    [(ngModel)]="searchTerm"
+    class="form-control"
+    style="width: 250px; display: inline-block; margin-right: 10px;"
+  />
+
+  <select [(ngModel)]="selectedStatut" class="form-control" style="width: 200px; display: inline-block;">
+    <option value="">Tous les statuts</option>
+    <option value="En attente">En attente</option>
+    <option value="Acceptée">Acceptée</option>
+    <option value="Refusée">Refusée</option>
+  </select>
+</div>
+
+
+  <div class="cards-container">
+   <div class="demande-card" *ngFor="let d of filteredDemandes">
+      <p><strong>Adresse Enlèvement:</strong> {{ d.adresseEnlevement }}</p>
+      <p><strong>Adresse Livraison:</strong> {{ d.adresseLivraison }}</p>
+      <p><strong>Date Souhaitée:</strong> {{ d.dateSouhaitee | date:'dd/MM/yyyy' }}</p>
+      <p><strong>Statut:</strong> {{ d.statut }}</p>
+
+      <div class="card-actions">
+        <button class="btn .btn-details " style="background-color: #1e3a8a;" (click)="openModal('details', d)">Détails</button>
+        <button class="btn btn-modifier" (click)="openModal('edit', d)">Modifier</button>
+        <button class="btn btn-supprimer" (click)="openModal('delete', d)">Supprimer</button>
+        <button class="btn" style="background-color:#f18d1a;" (click)="loadOffresPourDemande(d.id)">Offres</button>
+      </div>
+    </div>
+  </div>
+</ng-container>
+
+<ng-template #noData>
+  <p class="text-center">Aucune demande trouvée.</p>
+</ng-template>
+
+<!-- MODAL GLOBAL -->
+<div class="modal" [ngClass]="{ show: modalType }" *ngIf="selectedDemande">
+  <div class="modal-content">
+    <span class="close" (click)="closeModal()">&times;</span>
+
+    <!-- DETAILS -->
+    <ng-container *ngIf="modalType === 'details'">
+      <h3>Détails de la Demande</h3>
+      <p><strong>Enlèvement:</strong> {{ selectedDemande.adresseEnlevement }}</p>
+      <p><strong>Livraison:</strong> {{ selectedDemande.adresseLivraison }}</p>
+      <p><strong>Date:</strong> {{ selectedDemande.dateSouhaitee | date:'dd/MM/yyyy' }}</p>
+      <p><strong>Statut:</strong> {{ selectedDemande.statut }}</p>
+
+      <!-- Commande liée -->
+      <ng-container *ngIf="commandeLiee">
+        <div class="commande-liee-box">
+          <h4>Commande liée</h4>
+          <p><strong>Date Commande :</strong> {{ commandeLiee.dateCommande | date:'dd/MM/yyyy'}}</p>
+          <p><strong>Description :</strong> {{ commandeLiee.description }}</p>
+          <p><strong>Gouvernorat :</strong> {{ commandeLiee.gouvernorat }}</p>
+          <p><strong>Ville:</strong> {{ commandeLiee.ville }}</p>
+          <p><strong>Statut :</strong> {{ commandeLiee.statut }}</p>
+        </div>
+      </ng-container>
+    </ng-container>
+
+    <!-- EDIT -->
+    <ng-container *ngIf="modalType === 'edit'">
+      <h3>Modifier la Demande</h3>
+      <form (ngSubmit)="saveEdit()" class="form-edit-demande">
+        <div class="form-group mb-3">
+          <label for="adresseEnlevement">Adresse Enlèvement</label>
+          <input type="text" id="adresseEnlevement" [(ngModel)]="selectedDemande.adresseEnlevement" name="adresseEnlevement" class="form-control" required />
+        </div>
+
+        <div class="form-group mb-3">
+          <label for="adresseLivraison">Adresse Livraison</label>
+          <input type="text" id="adresseLivraison" [(ngModel)]="selectedDemande.adresseLivraison" name="adresseLivraison" class="form-control" required />
+        </div>
+
+        <div class="form-group mb-3">
+          <label for="dateSouhaitee">Date Souhaitée</label>
+          <input
+            type="date"
+            [ngModel]="formatDate(selectedDemande.dateSouhaitee)"
+            (ngModelChange)="selectedDemande.dateSouhaitee = $event"
+            name="dateSouhaitee"
+            class="form-control"
+            required
+          />
+        </div>
+
+        <div class="buttons">
+          <button type="submit" class="btn btn-success">Enregistrer</button>
+          <button type="button" class="btn btn-secondary" (click)="closeModal()">Annuler</button>
+        </div>
+      </form>
+    </ng-container>
+
+    <!-- DELETE -->
+    <ng-container *ngIf="modalType === 'delete'">
+      <h3>Confirmer la suppression</h3>
+      <p>Êtes-vous sûr de vouloir supprimer cette demande ?</p>
+      <div class="buttons">
+        <button (click)="confirmDelete()">Oui, supprimer</button>
+        <button (click)="closeModal()">Annuler</button>
+      </div>
+    </ng-container>
+  </div>
+</div>
+
+<!-- MODAL OFFRES -->
+<div class="modal" [class.show]="modalType === 'offres'">
+  <div class="modal-content" style="max-height: 80vh; overflow-y: auto;">
+    <span class="close" (click)="closeModal()">&times;</span>
+    <h2 style="margin-bottom: 1rem;">Offres pour la Demande</h2>
+
+    <div *ngIf="offresPourDemande.length === 0">
+      <p>Aucune offre trouvée pour cette demande.</p>
+    </div>
+
+    <div *ngFor="let offre of offresPourDemande" class="card">
+      <p><strong>Prix proposé :</strong> {{ offre.prixPropose }} TND</p>
+      <p><strong>Délai livraison :</strong> {{ offre.delaiLivraison }} jours</p>
+      <p><strong>Statut :</strong> {{ offre.statut }}</p>
+      <p><strong>Date :</strong> {{ offre.dateOffre | date:'dd/MM/yyyy' }}</p>
+
+      <div *ngIf="offre.statut === 'En attente'">
+        <ng-container *ngIf="offreEnCoursConfirmation?.id === offre.idOffre; else actionsNormales">
+          <p style="color:#555;">Êtes-vous sûr de vouloir {{ offreEnCoursConfirmation?.action?.toLowerCase() }} cette offre ?</p>
+          <button class="btn btn-success" (click)="confirmerChangementStatut()">Oui</button>
+          <button class="btn btn-secondary" (click)="annulerConfirmation()">Non</button>
+        </ng-container>
+
+        <ng-template #actionsNormales>
+          <button class="btn" style="background-color: green;" (click)="changerStatut(offre.idOffre, 'Acceptée')">Accepter</button>
+          <button class="btn" style="background-color:#ed1c24;" (click)="changerStatut(offre.idOffre, 'Refusée')">Refuser</button>
+        </ng-template>
+      </div>
+    </div>
+
+    <div class="buttons">
+      <button class="btn btn-secondary" (click)="closeModal()">Fermer</button>
+    </div>
+  </div>
+</div>

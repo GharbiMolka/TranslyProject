@@ -1,0 +1,24 @@
+<div class="form-container">
+  <h2>Ajouter une offre</h2>
+
+  <form (ngSubmit)="envoyerOffre()">
+    <div class="mb-3">
+      <label class="form-label" for="prixPropose">Prix proposé :</label>
+      <input type="number" id="prixPropose" [(ngModel)]="offreForm.prixPropose" name="prixPropose" class="form-control" required min="1" />
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label" for="delaiLivraison">Délai de livraison (jours) :</label>
+      <input type="number" id="delaiLivraison" [(ngModel)]="offreForm.delaiLivraison" name="delaiLivraison" class="form-control" required min="1" />
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label" for="statut">Statut :</label>
+      <select id="statut" [(ngModel)]="offreForm.statut" name="statut" class="form-select">
+        <option value="En attente">En attente</option>
+      </select>
+    </div>
+
+    <button type="submit" class="btn">Envoyer l'offre</button>
+  </form>
+</div>

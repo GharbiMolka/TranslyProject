@@ -1,0 +1,57 @@
+<div class="auth-container">
+  <div class="auth-left">
+    <h2 style="color: black; margin-top:20%;">Êtes-vous nouveau sur notre plateforme ?</h2>
+    <p style="color: black;">Optimisez votre expérience de livraison avec notre service</p>
+    <button class="ghost-btn" (click)="goToRegister()">CRÉER UN COMPTE</button>
+  </div>
+
+  <div class="auth-right">
+    <div class="logo">
+      <img src="assets/logo.png" alt="Logo" />
+    </div>
+
+    <h2 style="margin-top:2%;">Bienvenue !<br /><span>Connectez-vous maintenant</span></h2>
+
+    <!-- Message d'erreur global -->
+    <div *ngIf="error" class="error-message">
+      {{ error }}
+    </div>
+
+    <form (ngSubmit)="onSubmit(loginForm)" #loginForm="ngForm" novalidate>
+      <label>Email</label>
+      <input
+        type="email"
+        name="email"
+        [(ngModel)]="credentials.email"
+        #email="ngModel"
+        required
+        placeholder="E-mail"
+      />
+      <div *ngIf="loginForm.submitted && email.invalid" class="field-error">
+        L'adresse e-mail est requise.
+      </div>
+
+      <label>Mot de passe</label>
+      <div class="password-wrapper">
+        <input
+          type="password"
+          name="mdp"
+          [(ngModel)]="credentials.mdp"
+          #mdp="ngModel"
+          required
+          placeholder="Mot de passe"
+        />
+        <i class="eye-icon">👁️</i>
+      </div>
+      <div *ngIf="loginForm.submitted && mdp.invalid" class="field-error">
+        Le mot de passe est requis.
+      </div>
+
+      <button class="submit-btn" type="submit">SE CONNECTER</button>
+
+      <div class="options">
+        <a (click)="goToOubliermdp()">Mot de passe oublié ?</a>
+      </div>
+    </form>
+  </div>
+</div>

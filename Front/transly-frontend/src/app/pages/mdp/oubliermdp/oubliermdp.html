@@ -1,0 +1,23 @@
+<div class="auth-container">
+  <div class="auth-left">
+    <h2 style="color: rgb(255, 255, 255); margin-top:20%;">Mot de passe oublié ?</h2>
+    <p style="color: rgb(255, 255, 255);">Entrez votre adresse e-mail : un lien de réinitialisation de mot de passe vous sera envoyé.</p>
+    <button class="ghost-btn" (click)="goToLogin()">Connectez-vous</button>
+  </div>
+
+  <div class="auth-right">
+    <div class="logo">
+      <img src="assets/logo.png" alt="Logo" />
+    </div>
+
+    <h2 style="margin-top:2%;">Bienvenue !<br /><span>Connectez-vous maintenant</span></h2>
+
+    <form (ngSubmit)="submitEmail()">
+      <input type="email" [(ngModel)]="email" name="email" required placeholder="E-mail" />
+      <button class="submit-btn" type="submit">ENVOYER</button>
+    </form>
+
+    <div *ngIf="message" class="info">{{ message }}</div>
+    <div *ngIf="errorMessage" class="error">{{ errorMessage }}</div>
+  </div>
+</div>

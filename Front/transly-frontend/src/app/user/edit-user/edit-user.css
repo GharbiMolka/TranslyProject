@@ -1,0 +1,78 @@
+.edit-user-form {
+  max-width: 400px;
+  margin: 30px auto;
+  background-color: white;
+  padding: 30px 40px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+.edit-user-form label {
+  display: block;
+  margin-top: 15px;
+  font-weight: 600;
+  color: #333;
+}
+
+.edit-user-form input[type="text"],
+.edit-user-form input[type="email"],
+.edit-user-form input[type="password"],
+.edit-user-form input[type="tel"],
+.edit-user-form select {
+  width: 100%;
+  padding: 10px 12px;
+  margin-top: 6px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+.edit-user-form input[type="text"]:focus,
+.edit-user-form input[type="email"]:focus,
+.edit-user-form input[type="password"]:focus,
+.edit-user-form input[type="tel"]:focus,
+.edit-user-form select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.edit-user-form .error-message {
+  color: #d93025; /* rouge vif */
+  font-size: 0.875em;
+  margin-top: 5px;
+}
+
+.edit-user-form button[type="submit"] {
+  width: 100%;
+  margin-top: 20px;
+  padding: 12px;
+  background-color: #ed1c24;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.edit-user-form button[type="submit"]:disabled {
+  background-color: #ed1c24;
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.edit-user-form button[type="submit"]:hover:not(:disabled) {
+  background-color: #c7101b;
+}
+
+.edit-user-form .error-global {
+  color: red;
+  text-align: center;
+  margin-bottom: 15px;
+  font-weight: bold;
+}

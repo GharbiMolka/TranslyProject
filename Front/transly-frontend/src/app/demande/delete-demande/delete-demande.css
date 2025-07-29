@@ -1,0 +1,39 @@
+.delete-container {
+  max-width: 400px;
+  margin: 2rem auto;
+  padding: 1rem;
+  text-align: center;
+  background-color: #fefefe;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.delete-container h3 {
+  margin-bottom: 1rem;
+  color: #dc3545;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:first-child {
+  background-color: #dc3545;
+  color: white;
+}
+
+button:last-child {
+  background-color: #6c757d;
+  color: white;
+}

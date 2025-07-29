@@ -1,0 +1,118 @@
+<div class="container">
+  <h2>Liste de mes offres</h2>
+  <div class="filters">
+  <!-- 🔍 Recherche par prix -->
+  <input type="number" [(ngModel)]="searchPrix" placeholder="Prix minimum" class="form-control" />
+
+  <!-- 📦 Filtre par délai -->
+  <input type="number" [(ngModel)]="filterDelai" placeholder="Délai max (jours)" class="form-control" />
+
+  <!-- 📅 Filtre par date -->
+<input type="date" [(ngModel)]="filterDate" class="form-control" />
+
+  <!-- 🎯 Filtre par statut -->
+  <select [(ngModel)]="filterStatut" class="form-control">
+    <option value="">Tous les statuts</option>
+    <option value="En attente">En attente</option>
+    <option value="Acceptée">Acceptée</option>
+    <option value="Refusée">Refusée</option>
+  </select>
+</div>
+
+
+  <div *ngIf="errorMessage" class="error">
+    {{ errorMessage }}
+  </div>
+
+  <div *ngIf="offres.length === 0 && !errorMessage">
+    Aucune offre trouvée.
+  </div>
+
+  <!-- <div *ngFor="let o of offres" class="card"> -->
+    <div *ngFor="let o of filteredOffres()" class="card">
+    <p><strong>Prix proposé :</strong> {{ o.prixPropose }} TND</p>
+    <p><strong>Délai de livraison :</strong> {{ o.delaiLivraison }} jours</p>
+    <p><strong>Statut :</strong> {{ o.statut }}</p>
+    <p><strong>Date de l'offre :</strong> {{ o.dateOffre | date:'dd/MM/yyyy' }}</p>
+
+    <hr />
+    <div style="margin-top: 1rem; margin-left: 25%;">
+      <button class="btn btn-details" (click)="ouvrirModal(o, 'details')">Détails</button>
+      <button class="btn btn-modifier" (click)="ouvrirModal(o, 'edit')">Modifier</button>
+      <button class="btn btn-supprimer" (click)="ouvrirModal(o, 'delete')">Supprimer</button>
+    </div>
+  </div>
+</div>
+
+<!-- 🟦 Modal Détails -->
+<div class="modal" [class.show]="modalType === 'details'">
+  <div class="modal-content">
+    <span class="close" (click)="fermerModal()">&times;</span>
+    <h3>Détails de l'offre</h3>
+    <p><strong>Prix proposé :</strong> {{ selectedOffre?.prixPropose }} TND</p>
+    <p><strong>Délai de livraison :</strong> {{ selectedOffre?.delaiLivraison }} jours</p>
+    <p><strong>Statut :</strong> {{ selectedOffre?.statut }}</p>
+    <p><strong>Date :</strong> {{ selectedOffre?.dateOffre | date:'dd/MM/yyyy' }}</p>
+    <div class="buttons">
+      <button (click)="fermerModal()">Fermer</button>
+    </div>
+  </div>
+</div>
+
+<!-- 🟨 Modal Modifier -->
+<ng-container *ngIf="modalType === 'edit'">
+  <div class="modal show">
+    <div class="modal-content">
+      <span class="close" (click)="fermerModal()">&times;</span>
+      <h3>Modifier l'offre</h3>
+
+      <form (ngSubmit)="modifierOffre()" class="form-edit-demande">
+
+        <div class="form-group mb-3">
+          <label for="prixPropose">Prix proposé</label>
+          <input
+            type="number"
+            id="prixPropose"
+            [(ngModel)]="selectedOffre!.prixPropose"
+            name="prixPropose"
+            class="form-control"
+            required
+          />
+        </div>
+
+        <div class="form-group mb-3">
+          <label for="delaiLivraison">Délai de livraison (jours)</label>
+          <input
+            type="number"
+            id="delaiLivraison"
+            [(ngModel)]="selectedOffre!.delaiLivraison"
+            name="delaiLivraison"
+            class="form-control"
+            required
+          />
+        </div>
+
+    
+
+        <div class="buttons">
+          <button type="submit">Enregistrer</button>
+          <button type="button" (click)="fermerModal()">Annuler</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</ng-container>
+
+
+<!-- 🟥 Modal Supprimer -->
+<div class="modal" [class.show]="modalType === 'delete'">
+  <div class="modal-content">
+    <span class="close" (click)="fermerModal()">&times;</span>
+    <h3>Confirmer la suppression</h3>
+    <p>Êtes-vous sûr de vouloir supprimer cette offre ?</p>
+    <div class="buttons">
+      <button (click)="confirmerSuppression()">Oui, supprimer</button>
+      <button (click)="fermerModal()">Annuler</button>
+    </div>
+  </div>
+</div>

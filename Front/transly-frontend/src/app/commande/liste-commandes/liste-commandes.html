@@ -1,0 +1,105 @@
+<div class="container">
+  <div style="display: flex;"> <h2>Mes Commandes</h2>
+  <button style="margin-left:60%;" class="btn btn-ajouter" (click)="goToAddCommande()" >Ajouter une commande</button>
+
+</div>
+ 
+  <div *ngIf="errorMessage" class="error">
+    {{ errorMessage }}
+  </div>
+
+  <div *ngIf="commandes.length === 0 && !errorMessage">
+    Aucune commande trouvée.
+  </div>
+
+
+  <!-- Barre de recherche et filtres -->
+<div class="filters">
+  <input type="text" class="form-control" placeholder="Rechercher par adresse ou description..." [(ngModel)]="searchTerm" />
+
+  <select [(ngModel)]="selectedStatut" class="form-control">
+    <option value="">-- Tous les statuts --</option>
+    <option value="En attente">En attente</option>
+    <option value="Acceptée">Acceptée</option>
+    <option value="Refusée">Refusée</option>
+  </select>
+
+  <select [(ngModel)]="selectedGouvernorat" class="form-control">
+   <option value="">-- Tous les gouvernorats --</option>
+<option value="Ariana">Ariana</option>
+<option value="Béja">Béja</option>
+<option value="Ben Arous">Ben Arous</option>
+<option value="Bizerte">Bizerte</option>
+<option value="Gabès">Gabès</option>
+<option value="Gafsa">Gafsa</option>
+<option value="Jendouba">Jendouba</option>
+<option value="Kairouan">Kairouan</option>
+<option value="Kasserine">Kasserine</option>
+<option value="Kébili">Kébili</option>
+<option value="Le Kef">Le Kef</option>
+<option value="Mahdia">Mahdia</option>
+<option value="La Manouba">La Manouba</option>
+<option value="Médenine">Médenine</option>
+<option value="Monastir">Monastir</option>
+<option value="Nabeul">Nabeul</option>
+<option value="Sfax">Sfax</option>
+<option value="Sidi Bouzid">Sidi Bouzid</option>
+<option value="Siliana">Siliana</option>
+<option value="Sousse">Sousse</option>
+<option value="Tataouine">Tataouine</option>
+<option value="Tozeur">Tozeur</option>
+<option value="Tunis">Tunis</option>
+<option value="Zaghouan">Zaghouan</option>
+
+    <option *ngFor="let gov of gouvernorats" [value]="gov">{{ gov }}</option>
+  </select>
+</div>
+
+<div *ngFor="let commande of filteredCommandes" class="card">
+  <p><strong>Date:</strong> {{ commande.dateCommande | date:'dd/MM/yyyy ' }}</p>
+  <p><strong>Adresse:</strong> {{ commande.adresse }}, {{ commande.ville }}, {{ commande.gouvernorat }}</p>
+  <p><strong>Description:</strong> {{ commande.description }}</p>
+  <p><strong>Statut:</strong> {{ commande.statut }}</p>
+
+  <!-- Détails : toujours visible -->
+  <button class="btn btn-details" (click)="openDetailModal(commande)">Détails</button>
+
+  <!-- Modifier : seulement si statut !== 'Acceptée' et !== 'Refusée' -->
+  <button class="btn btn-modifier" *ngIf="commande.statut === 'En attente'" (click)="openEditModal(commande)">Modifier</button>
+
+  <!-- Supprimer : seulement si statut !== 'Acceptée' -->
+  <button class="btn btn-supprimer"
+          *ngIf="commande.statut === 'En attente' || commande.statut === 'Refusée'"
+          (click)="openDeleteModal(commande.id_Com)">
+    Supprimer
+  </button>
+</div>
+
+
+  <app-delete-commande
+  [show]="showDeleteModal"
+  (confirmDelete)="deleteCommande()"
+  (cancel)="closeDeleteModal()">
+</app-delete-commande>
+
+<app-detail-commande
+  [show]="showDetailModal"
+  [commande]="selectedCommandeDetails"
+  (close)="closeDetailModal()">
+</app-detail-commande>
+
+
+<app-edit-commande
+  [show]="showEditModal"
+  [commande]="commandeToEdit"
+  (close)="closeEditModal()"
+  (save)="saveEditedCommande($event)">
+</app-edit-commande>
+</div>
+
+
+
+
+
+
+

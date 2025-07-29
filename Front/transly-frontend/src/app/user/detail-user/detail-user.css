@@ -1,0 +1,43 @@
+.details-container {
+  max-width: 400px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+.details-container h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.image-section img {
+  max-width: 50%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+p {
+  margin: 8px 0;
+  font-size: 16px;
+}
+button {
+  background-color: #ed1c24;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 16px;
+  border-radius: 25px;
+  cursor: pointer;
+   margin-left: 45%;
+  transition: background-color 0.3s ease;
+  margin-bottom: 70%;
+  
+  
+}

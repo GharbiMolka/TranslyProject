@@ -1,0 +1,444 @@
+/* Table styles */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th, .table td {
+  vertical-align: middle;
+  padding: 12px 16px;
+  text-align: center;
+}
+
+.table thead {
+  background-color: #354e70;;
+  color: white;
+}
+
+.table tbody tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+/* Hover effect for rows */
+.table tbody tr:hover {
+  background-color: #e2e6ea;
+}
+
+/* Button styles */
+/* Bouton de base */
+.btn {
+  border: none;
+  padding: 8px 14px;
+  min-width: 100px;
+  font-size: 0.9rem;
+  border-radius: 6px;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+.btn:hover {
+  opacity: 0.85;
+}
+
+/* Couleurs spécifiques */
+.btn-modifier {
+  background-color: #374151; /* Bleu foncé */
+}
+
+.btn-details {
+  background-color: #1e3a8a; /* Bleu clair */
+}
+
+.btn-supprimer {
+  background-color: #ed1c24; /* Rouge */
+}
+
+.btn-ajouter {
+  background-color: #216c25; /* Vert foncé */
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+/* Espacement entre les boutons */
+.btn + .btn {
+  margin-left: 6px;
+}
+
+/* Responsive table (simple) */
+@media (max-width: 768px) {
+  .table thead {
+    display: none;
+  }
+
+  .table, .table tbody, .table tr, .table td {
+    display: block;
+    width: 100%;
+  }
+
+  .table tr {
+    margin-bottom: 1rem;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  .table td {
+    text-align: left;
+    padding: 10px 16px;
+    position: relative;
+  }
+
+  .table td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    display: block;
+    margin-bottom: 4px;
+    color: #495057;
+  }
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(2px);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.modal.show {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+  position: relative;
+  animation: slideIn 0.3s ease-out;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.modal-content h3 {
+  color: #dc3545;
+  margin-bottom: 1.5rem;
+  font-size: 1.4rem;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:first-child {
+  background-color: #dc3545;
+  color: white;
+}
+
+button:first-child:hover {
+  background-color: #b02a37;
+}
+
+button:last-child {
+  background-color: #6c757d;
+  color: white;
+}
+
+button:last-child:hover {
+  background-color: #565e64;
+}
+
+.modal-content .close {
+  position: absolute;
+  top: 8px;
+  right: 14px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #999;
+  cursor: pointer;
+}
+
+.form-edit-demande label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  display: block;
+  color: #374151;
+}
+
+.form-edit-demande input,
+.form-edit-demande select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+.form-edit-demande .form-group {
+  margin-bottom: 1rem;
+}
+
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.btn-success {
+  background-color: #198754;
+  color: white;
+}
+
+.btn-success:hover {
+  background-color: #157347;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: #565e64;
+}
+
+
+.modal-content .card {
+  margin-bottom: 1rem;
+  background-color: #fff;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  text-align: left;
+}
+
+.commande-liee-box {
+  background-color: #767676; /* rouge vif */
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 5%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  height: 45%;
+}
+
+.commande-liee-box h4 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  padding-bottom: 5px;
+  color: #b02a37;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.demande-card {
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  transition: transform 0.2s ease;
+}
+
+.demande-card:hover {
+  transform: translateY(-4px);
+}
+
+.card-actions {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+/* Boutons */
+.btn {
+  border: none;
+  padding: 8px 14px;
+  min-width: 100px;
+  font-size: 0.9rem;
+  border-radius: 6px;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+.btn:hover {
+  opacity: 0.85;
+}
+
+.btn-modifier { background-color: #374151; }
+.btn-supprimer { background-color: #ed1c24; }
+.btn-success { background-color: #198754; }
+.btn-secondary { background-color: #6c757d; }
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(2px);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.modal.show {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+  position: relative;
+  animation: slideIn 0.3s ease-out;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.modal-content h3 {
+  color: #dc3545;
+  margin-bottom: 1.5rem;
+  font-size: 1.4rem;
+}
+
+.modal-content .close {
+  position: absolute;
+  top: 8px;
+  right: 14px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #999;
+  cursor: pointer;
+}
+
+.commande-liee-box {
+  background-color: #767676;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 5%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.commande-liee-box h4 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  padding-bottom: 5px;
+  color: #b02a37;
+}
+
+.form-edit-demande label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  display: block;
+  color: #374151;
+}
+
+.form-edit-demande input,
+.form-edit-demande select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+.form-edit-demande .form-group {
+  margin-bottom: 1rem;
+}
+
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+
+.filters {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+ 
+  flex-wrap: wrap;
+  margin-left: 15%;
+}
+
+.filters .form-control {
+  padding: 8px;
+  font-size: 0.9rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  width: 250px;
+}

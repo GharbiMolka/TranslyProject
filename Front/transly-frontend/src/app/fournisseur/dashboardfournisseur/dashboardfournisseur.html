@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="dashboardfournisseur.css" />
+</head>
+<body>
+
+  <div class="dashboard">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+          <img src="assets/logo.png" alt="Transly Logo" />
+           <p style="text-align: center; margin-bottom: 10px;"> Dashboard Fournisseur</p>
+      <nav class="sidebar-nav">
+    <a><i class="fas fa-home"></i>Accueil</a>
+    <a (click)="goToDetailuser()"><i class="fas fa-user"></i> Profil</a>
+    <a (click)="goToCommandeFournisseur()"><i class="fas fa-receipt"></i> Commandes</a>
+    <a (click)="goToListDemande()"><i class="fas fa-truck"></i> Demandes</a>
+<a href="#" class="logout-btn" style="margin-top: 100%;"><i class="fas fa-sign-out-alt"></i> Déconnexion</a>
+      </nav>
+    </aside>
+
+    <!-- Main content -->
+    <div class="main-content">
+      <!-- Top navbar -->
+      <header class="navbar">
+        <div class="notifications">
+          🔔 <span class="badge">3</span>
+        </div>
+      </header>
+
+      <!-- Page content -->
+      <section class="content">
+    <router-outlet></router-outlet>
+      </section>
+    </div>
+  </div>
+
+</body>
+</html>

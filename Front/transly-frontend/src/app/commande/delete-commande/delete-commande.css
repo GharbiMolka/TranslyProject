@@ -1,0 +1,101 @@
+/* ✅ FOND FLOUTÉ DU MODAL */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* fond sombre semi-transparent */
+  backdrop-filter: blur(2px); /* effet flou */
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* ✅ AFFICHER LE MODAL */
+.modal.show {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ✅ CONTENU DE LA FENÊTRE MODALE */
+.modal-content {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+  position: relative;
+  animation: slideIn 0.3s ease-out;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* ✅ ANIMATIONS */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* ✅ TITRE */
+.modal-content h3 {
+  color: #dc3545;
+  margin-bottom: 1.5rem;
+  font-size: 1.4rem;
+}
+
+/* ✅ BOUTONS */
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:first-child {
+  background-color: #dc3545;
+  color: white;
+}
+
+button:first-child:hover {
+  background-color: #b02a37;
+}
+
+button:last-child {
+  background-color: #6c757d;
+  color: white;
+}
+
+button:last-child:hover {
+  background-color: #565e64;
+}
+
+/* ✅ BOUTON DE FERMETURE (X) EN HAUT À DROITE (facultatif) */
+.modal-content .close {
+  position: absolute;
+  top: 8px;
+  right: 14px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #999;
+}

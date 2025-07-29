@@ -1,0 +1,46 @@
+<div class="auth-container">
+  <!-- Partie gauche -->
+  <div class="auth-left">
+    <div class="welcome-text">
+      <h2>Êtes-vous prêt à commencer votre expérience ?</h2>
+      <button class="ghost-btn" (click)="goToLogin()">Connectez-vous</button>
+    </div>
+  </div>
+
+  <!-- Partie droite -->
+  <div class="auth-right">
+    <div class="logo">
+      <img src="assets/logo.png" alt="Logo" />
+    </div>
+
+    <h2>Bienvenue !<br />Inscrivez-vous maintenant<br />En tant que</h2>
+
+    <div class="role-buttons">
+      <button type="button" class="role-btn" [class.active]="user.role === 'Fournisseur'" (click)="user.role = 'Fournisseur'">
+        <i class="fas fa-warehouse"></i> Fournisseur
+      </button>
+      <button type="button" class="role-btn" [class.active]="user.role === 'Transporteur'" (click)="user.role = 'Transporteur'">
+        <i class="fas fa-truck"></i> Transporteur
+      </button>
+      <button type="button" class="role-btn" [class.active]="user.role === 'Client'" (click)="user.role = 'Client'">
+        <i class="fas fa-user"></i> Client
+      </button>
+    </div>
+
+    <form (ngSubmit)="onSubmit()" #form="ngForm" class="form-grid">
+      <input type="text" placeholder="Prénom" name="prenom" [(ngModel)]="user.prenom" required />
+      <input type="text" placeholder="Nom" name="nom" [(ngModel)]="user.nom" required />
+
+      <input type="email" placeholder="E-mail" name="email" [(ngModel)]="user.email" required />
+      <input type="password" placeholder="Mot de passe" name="mdp" [(ngModel)]="user.mdp" required />
+
+      <input type="text" placeholder="Adresse" name="adresse" [(ngModel)]="user.adresse" />
+      <input type="text" placeholder="Ville" name="ville" [(ngModel)]="user.ville" />
+
+      <input type="text" placeholder="Choisissez Gouvernorat" name="gouvernorat" [(ngModel)]="user.gouvernorat" />
+      <input type="text" placeholder="Numéro de téléphone" name="tel" [(ngModel)]="user.tel" />
+
+      <button class="submit-btn" type="submit" [disabled]="form.invalid">S'inscrire</button>
+    </form>
+  </div>
+</div>

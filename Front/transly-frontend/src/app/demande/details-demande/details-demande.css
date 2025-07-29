@@ -1,0 +1,18 @@
+.container {
+  max-width: 800px;
+  margin: auto;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.row {
+  margin-bottom: 1rem;
+}
+
+strong {
+  color: #333;
+}

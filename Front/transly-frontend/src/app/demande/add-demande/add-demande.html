@@ -1,0 +1,27 @@
+<div class="form-container">
+  <h2>Nouvelle Demande de Livraison</h2>
+
+  <form (ngSubmit)="envoyerDemande()" #form="ngForm">
+
+    <div class="mb-3">
+      <label class="form-label">Adresse d'enlèvement</label>
+      <input class="form-control" name="adresseEnlevement" [(ngModel)]="demandeForm.adresseEnlevement" required />
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Adresse de livraison</label>
+      <input class="form-control" name="adresseLivraison" [(ngModel)]="demandeForm.adresseLivraison" required />
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Date souhaitée</label>
+     <input  class="form-control"  type="date" name="dateSouhaitee" [(ngModel)]="demandeForm.dateSouhaitee" [min]="minDate" required />
+      </div>
+
+    
+
+    <button type="submit" class="btn btn-primary" [disabled]="form.invalid">
+      Envoyer la demande
+    </button>
+  </form>
+</div>

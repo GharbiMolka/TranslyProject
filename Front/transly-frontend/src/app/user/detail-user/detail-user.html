@@ -1,0 +1,23 @@
+<div class="details-container">
+  <h2 style="color: red;">Détails de l'utilisateur</h2>
+
+  <div class="image-section">
+    <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="Photo de profil par défaut" />
+  </div>
+
+  <div *ngIf="userData; else loading">
+    <p><strong>Nom :</strong> {{ userData.nom }}</p>
+    <p><strong>Prénom :</strong> {{ userData.prenom }}</p>
+    <p><strong>Email :</strong> {{ userData.email }}</p>
+    <p><strong>Adresse :</strong> {{ userData.adresse }}</p>
+    <p><strong>Gouvernorat :</strong> {{ userData.gouvernorat }}</p>
+    <p><strong>Ville :</strong> {{ userData.ville }}</p>
+    <p><strong>Rôle :</strong> {{ userData.role }}</p>
+    <p><strong>Téléphone :</strong> {{ userData.tel }}</p>
+  </div>
+
+  <ng-template #loading>
+    <p>Chargement des données utilisateur...</p>
+  </ng-template>
+</div>
+<button (click)="goToEdituser()">Modifier Profil</button>

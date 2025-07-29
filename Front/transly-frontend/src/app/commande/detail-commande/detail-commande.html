@@ -1,0 +1,23 @@
+<div class="modal" [ngClass]="{ 'show': show }" *ngIf="commande">
+
+  <div class="modal-content">
+    <span class="close" (click)="onClose()">&times;</span>
+
+    <h3>Détails de la commande</h3>
+  
+    <p><strong>Date :</strong> {{ commande.dateCommande | date:'dd/MM/yyyy' }}</p>
+    <p><strong>Adresse :</strong> {{ commande.adresse }}, {{ commande.ville }}, {{ commande.gouvernorat }}</p>
+    <p><strong>Description :</strong> {{ commande.description }}</p>
+    <p><strong>Statut :</strong> {{ commande.statut }}</p>
+
+    <div *ngIf="roleUserConnecte === 'Fournisseur' && userCommande">
+  <h4 style="margin-top: 15px;">Informations du client :</h4>
+  <p><strong>Nom :</strong> {{ userCommande.nom }} {{ userCommande.prenom }}</p>
+  <p><strong>Email :</strong> {{ userCommande.email }}</p>
+</div>
+
+    <div class="buttons">
+      <button (click)="onClose()">Fermer</button>
+    </div>
+  </div>
+</div>

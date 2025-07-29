@@ -1,0 +1,36 @@
+<div class="container mt-4" *ngIf="demande">
+  <h2 class="text-center text-primary mb-4" style="color: red; text-align: center;">Détails de la Demande</h2>
+
+  <div class="card shadow-sm p-4">
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <!-- <strong>ID Commande :</strong> {{ demande.id_Commande }} -->
+      </div>
+      <div class="col-md-6">
+        <!-- <strong>ID Utilisateur :</strong> {{ demande.id_User }} -->
+      </div>
+    </div>
+
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <strong>Adresse d'enlèvement :</strong> {{ demande.adresseEnlevement }}
+      </div>
+      <div class="col-md-6">
+        <strong>Adresse de livraison :</strong> {{ demande.adresseLivraison }}
+      </div>
+    </div>
+
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <strong>Date souhaitée :</strong> {{ demande.dateSouhaitee | date:'dd/MM/yyyy' }}
+      </div>
+      <div class="col-md-6">
+        <strong>Statut :</strong> {{ demande.statut }}
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="text-center mt-4" *ngIf="!demande">
+  <p class="text-muted">Aucune donnée à afficher.</p>
+</div>

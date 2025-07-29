@@ -1,0 +1,45 @@
+<div class="modal" [ngClass]="{ 'show': show }" *ngIf="commande">
+  <div class="modal-content">
+    <span class="close" (click)="onClose()">&times;</span>
+    <h3>Modifier la commande</h3>
+
+    <form [formGroup]="commandeForm" (ngSubmit)="onSave()">
+      <input type="date" formControlName="dateCommande" />
+      <textarea formControlName="description" placeholder="Description"></textarea>
+      <input type="text" formControlName="adresse" placeholder="Adresse" />
+      <input type="text" formControlName="ville" placeholder="Ville" />
+      <select formControlName="gouvernorat">
+        <option value="">-- Sélectionner un gouvernorat --</option>
+       <option value="Ariana">Ariana</option>
+    <option value="Béja">Béja</option>
+    <option value="Ben Arous">Ben Arous</option>
+    <option value="Bizerte">Bizerte</option>
+    <option value="Gabès">Gabès</option>
+    <option value="Gafsa">Gafsa</option>
+    <option value="Jendouba">Jendouba</option>
+    <option value="Kairouan">Kairouan</option>
+    <option value="Kasserine">Kasserine</option>
+    <option value="Kébili">Kébili</option>
+    <option value="Kef">Kef</option>
+    <option value="Mahdia">Mahdia</option>
+    <option value="La Manouba">La Manouba</option>
+    <option value="Médenine">Médenine</option>
+    <option value="Monastir">Monastir</option>
+    <option value="Nabeul">Nabeul</option>
+    <option value="Sfax">Sfax</option>
+    <option value="Sidi Bouzid">Sidi Bouzid</option>
+    <option value="Siliana">Siliana</option>
+    <option value="Sousse">Sousse</option>
+    <option value="Tataouine">Tataouine</option>
+    <option value="Tozeur">Tozeur</option>
+    <option value="Tunis">Tunis</option>
+    <option value="Zaghouan">Zaghouan</option>
+      </select>
+
+      <div class="buttons">
+        <button type="submit">Enregistrer</button>
+        <button type="button" (click)="onClose()">Annuler</button>
+      </div>
+    </form>
+  </div>
+</div>

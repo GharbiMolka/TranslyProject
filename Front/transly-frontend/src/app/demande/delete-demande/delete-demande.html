@@ -1,0 +1,9 @@
+<div class="delete-container" *ngIf="demande">
+  <h3>Confirmer la suppression</h3>
+  <p>Voulez-vous vraiment supprimer la demande <strong>#{{ demande.id }}</strong> ?</p>
+
+  <div class="buttons">
+    <button (click)="confirmDelete()">Oui, supprimer</button>
+    <button (click)="cancel()">Annuler</button>
+  </div>
+</div>

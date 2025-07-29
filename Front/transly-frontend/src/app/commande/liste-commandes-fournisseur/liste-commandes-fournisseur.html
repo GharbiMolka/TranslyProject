@@ -1,0 +1,100 @@
+<div class="container">
+  <h2>Liste des commandes</h2>
+<div class="filters">
+  <input type="text" class="form-control" placeholder="Rechercher par adresse ou description..." [(ngModel)]="searchTerm" />
+
+  <select class="form-control" [(ngModel)]="selectedStatut">
+    <option value="">-- Tous les statuts --</option>
+    <option value="En attente">En attente</option>
+    <option value="Acceptée">Acceptée</option>
+    <option value="Refusée">Refusée</option>
+  </select>
+
+  <select class="form-control" [(ngModel)]="selectedGouvernorat">
+    <option value="">-- Tous les gouvernorats --</option>
+    <option value="Ariana">Ariana</option>
+    <option value="Béja">Béja</option>
+    <option value="Ben Arous">Ben Arous</option>
+    <option value="Bizerte">Bizerte</option>
+    <option value="Gabès">Gabès</option>
+    <option value="Gafsa">Gafsa</option>
+    <option value="Jendouba">Jendouba</option>
+    <option value="Kairouan">Kairouan</option>
+    <option value="Kasserine">Kasserine</option>
+    <option value="Kébili">Kébili</option>
+    <option value="Le Kef">Le Kef</option>
+    <option value="Mahdia">Mahdia</option>
+    <option value="La Manouba">La Manouba</option>
+    <option value="Médenine">Médenine</option>
+    <option value="Monastir">Monastir</option>
+    <option value="Nabeul">Nabeul</option>
+    <option value="Sfax">Sfax</option>
+    <option value="Sidi Bouzid">Sidi Bouzid</option>
+    <option value="Siliana">Siliana</option>
+    <option value="Sousse">Sousse</option>
+    <option value="Tataouine">Tataouine</option>
+    <option value="Tozeur">Tozeur</option>
+    <option value="Tunis">Tunis</option>
+    <option value="Zaghouan">Zaghouan</option>
+  </select>
+</div>
+
+  <div *ngIf="errorMessage" class="error">
+    {{ errorMessage }}
+  </div>
+
+  <div *ngIf="commandes.length === 0 && !errorMessage">
+    Aucune commande trouvée.
+  </div>
+
+<div *ngFor="let commande of filteredCommandes" class="card">
+    <p><strong>Date :</strong> {{ commande.dateCommande | date:'dd/MM/yyyy' }}</p>
+    <p><strong>Adresse :</strong> {{ commande.adresse }}, {{ commande.ville }}, {{ commande.gouvernorat }}</p>
+    <p><strong>Description :</strong> {{ commande.description }}</p>
+    <p><strong>Statut :</strong> {{ commande.statut }}</p>
+  <div *ngIf="commande.statut === 'En attente'" style="text-align: center;">
+  <button class="btn btn-accepter" (click)="ouvrirConfirmation(commande.id_Com, 'accept')">Accepter</button>
+  <button class="btn btn-supprimer" (click)="ouvrirConfirmation(commande.id_Com, 'refuse')">Refuser</button>
+    <button class="btn btn-details" (click)="openDetailModal(commande)">Détails</button>
+  </div>
+
+  <div *ngIf="commande.statut === 'Acceptée'" style="text-align: center; margin-top: 10px;">
+  <button class="btn btn-demande" (click)="faireDemande(commande.id_Com)">Demande</button>
+        <button class="btn btn-details" (click)="openDetailModal(commande)">Détails</button>
+</div>
+
+
+</div>
+</div>
+
+<div *ngIf="typeAction" class="modal show" id="confirmationModal">
+  <div class="modal-content">
+    <span class="close" (click)="fermerModal()">&times;</span>
+    <h3>
+      {{ typeAction === 'accept' ? 'Êtes-vous sûr de vouloir accepter cette commande ?' : 'Êtes-vous sûr de vouloir refuser cette commande ?' }}
+    </h3>
+    <div class="buttons">
+      <button (click)="confirmerAction()">Oui</button>
+      <button (click)="fermerModal()">Annuler</button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal de détails de la commande -->
+<div *ngIf="showDetailModal && selectedCommandeDetails" class="modal show" id="detailModal">
+  <div class="modal-content">
+    <span class="close" (click)="closeDetailModal()">&times;</span>
+    <h3>Détails de la commande</h3>
+    <p><strong>Date :</strong> {{ selectedCommandeDetails.dateCommande | date:'dd/MM/yyyy' }}</p>
+    <p><strong>Adresse :</strong> {{ selectedCommandeDetails.adresse }}, {{ selectedCommandeDetails.ville }}, {{ selectedCommandeDetails.gouvernorat }}</p>
+    <p><strong>Description :</strong> {{ selectedCommandeDetails.description }}</p>
+    <p><strong>Statut :</strong> {{ selectedCommandeDetails.statut }}</p>
+
+    <!-- Info utilisateur -->
+    <div  class="user-liee-box" *ngIf="selectedCommandeDetails.user">
+      <h4>Informations du client</h4>
+      <p><strong>Nom :</strong> {{ selectedCommandeDetails.user.nom }} {{ selectedCommandeDetails.user.prenom }}</p>
+      <p><strong>Email :</strong> {{ selectedCommandeDetails.user.email }}</p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,9 @@
+<div class="modal" [ngClass]="{ 'show': show }">
+  <div class="modal-content delete-container">
+    <h3>Voulez-vous vraiment supprimer cette commande ?</h3>
+    <div class="buttons">
+      <button (click)="onConfirm()">Supprimer</button>
+      <button (click)="onCancel()">Annuler</button>
+    </div>
+  </div>
+</div>

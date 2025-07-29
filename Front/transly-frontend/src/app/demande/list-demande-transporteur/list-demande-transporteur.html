@@ -1,0 +1,35 @@
+<div class="container">
+  <h2>Liste des Demandes</h2>
+
+  <!-- 🔍 Barre de recherche + Filtre statut dans un conteneur "filters" -->
+  <div class="filters">
+    <input type="text" [(ngModel)]="searchTerm" placeholder="Rechercher par adresse" class="form-control" />
+
+    <select [(ngModel)]="selectedStatut" class="form-control">
+      <option value="">Tous les statuts</option>
+      <option value="En attente">En attente</option>
+      <option value="Acceptée">Acceptée</option>
+      <option value="Refusée">Refusée</option>
+    </select>
+<input type="date" [(ngModel)]="selectedDate" class="form-control" />
+  <button (click)="resetDateFilter()" class="btn btn-details">Réinitialiser</button>
+  </div>
+
+  <div *ngIf="errorMessage" class="error">
+    {{ errorMessage }}
+  </div>
+
+  <div *ngIf="filteredDemandes.length === 0 && !errorMessage">
+    Aucune demande trouvée.
+  </div>
+
+  <div *ngFor="let d of filteredDemandes" class="card">
+    <p><strong>Adresse Enlèvement :</strong> {{ d.adresseEnlevement }}</p>
+    <p><strong>Adresse Livraison :</strong> {{ d.adresseLivraison }}</p>
+    <p><strong>Date Souhaitée :</strong> {{ d.dateSouhaitee | date:'dd/MM/yyyy' }}</p>
+    <p><strong>Statut :</strong> {{ d.statut }}</p>
+    <div>
+      <button class="btn btn-demande" (click)="faireOffre(d.id)">Ajouter Une Offre</button>
+    </div>
+  </div>
+</div>
