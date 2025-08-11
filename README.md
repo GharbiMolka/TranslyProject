@@ -24,6 +24,7 @@ Ce projet a été réalisé dans le cadre  de mon stage de 1 ere année cycle in
 2. **Configurer la base de données**
    
    -Ouvre le fichier appsettings.json ou appsettings.Development.json
+   
    -Modifie la chaîne de connexion pour ton SQL Server :
     ```bash
    "ConnectionStrings": {
