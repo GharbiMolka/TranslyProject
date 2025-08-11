@@ -1,7 +1,9 @@
 # Transly 🚚
-**Transly** est une application complète de gestion des livraisons développée avec .Net et Angular.  
+
+Transly est une application complète de gestion des livraisons développée avec .Net et Angular.  
 Conçue pour simplifier le processus de livraison entre le client , le fournisseur et le transporteur.  
 Ce projet a été réalisé dans le cadre  de mon stage de 1 ere année cycle ingénieur **Stage d'immersion en entreprise**, mettant l'accent sur le développement web avancé.
+
 ---
 
 ## ✨ Fonctionnalités
