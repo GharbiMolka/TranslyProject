@@ -17,7 +17,25 @@ Ce projet a été réalisé dans le cadre  de mon stage de 1 ere année cycle in
 ---
 ## 🛠️ Installation
 
----
+1. **Cloner le dépôt**
+   ```bash
+   git clone https://github.com/yourusername/translyproject.git
+   cd translyproject
+2. **Configurer la base de données**
+   -Ouvre le fichier appsettings.json ou appsettings.Development.json
+   -Modifie la chaîne de connexion pour ton SQL Server :
+    ```bash
+   "ConnectionStrings": {
+   "DefaultConnection": "Server=localhost;Database=NomDeTaBase;User Id=ton_utilisateur;Password=ton_motdepasse;Trusted_Connection=False;MultipleActiveResultSets=true"
+   }
+  
+4. **Appliquer les migrations**
+   ```bash
+    dotnet ef database update
+4. **Lancer l'application**
+   ```bash
+   dotnet run
+   
 ## 💻 Technologies utilisées
 
 ### Backend
