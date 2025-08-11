@@ -22,6 +22,7 @@ Ce projet a été réalisé dans le cadre  de mon stage de 1 ere année cycle in
    git clone https://github.com/yourusername/translyproject.git
    cd translyproject
 2. **Configurer la base de données**
+   
    -Ouvre le fichier appsettings.json ou appsettings.Development.json
    -Modifie la chaîne de connexion pour ton SQL Server :
     ```bash
@@ -54,3 +55,13 @@ Ce projet a été réalisé dans le cadre  de mon stage de 1 ere année cycle in
 
 ### Outils
 ![Git](https://img.shields.io/badge/Git-F05032?logo=git&logoColor=white)
+
+### Équipe de développement :
+
+Molka Gharbi - molka.gharbi@esprit.tn
+
+## 📜 Licence
+Ce projet est sous licence MIT – voir le fichier LICENSE pour plus de détails.
+
+## 🙏 Remerciements
+Ce projet a été développé dans le cadre de mon stage de  1 ere année cycle ingénieur . je tiens à remercier  mon encadrant pour son précieux encadrement et son soutien tout au long du développement.
