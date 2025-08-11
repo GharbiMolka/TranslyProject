@@ -17,11 +17,18 @@ import { AuthService } from '../../services/auth';
 })
 export class Dashboardtransporteur implements OnInit {
   userId: number | null = null;
+    activeItem: string = 'accueil';
+    userName: string = '';
 
   constructor(private router: Router, private authService: AuthService) {}
 
   ngOnInit(): void {
     this.userId = this.authService.getUserId();
+       const user = this.authService.getUser();
+  if (user) {
+    this.userId = user.id;
+    this.userName = `${user.prenom} ${user.nom}`;
+  }
   }
 
   getUserId(): number | null {
@@ -35,12 +42,15 @@ export class Dashboardtransporteur implements OnInit {
   }
 
   goToListDemandes(): void {
+    this.activeItem = 'demandes';
     this.router.navigate(['/dashboardtransporteur/liste-demande']);
   }
-
- 
-
+  goToHome(): void {
+    this.activeItem = 'accueil';
+    this.router.navigate(['/dashboardclient']);
+  }
    goToListOffre(): void {
+       this.activeItem = 'offres';
     this.router.navigate(['/dashboardtransporteur/liste-offre']);
   }
 }

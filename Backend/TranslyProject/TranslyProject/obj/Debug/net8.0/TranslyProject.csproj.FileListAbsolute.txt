@@ -342,3 +342,4 @@ C:\Users\USER\Desktop\Transly\Backend\TranslyProject\TranslyProject\obj\Debug\ne
 C:\Users\USER\Desktop\Transly\Backend\TranslyProject\TranslyProject\obj\Debug\net8.0\TranslyProject.pdb
 C:\Users\USER\Desktop\Transly\Backend\TranslyProject\TranslyProject\obj\Debug\net8.0\TranslyProject.genruntimeconfig.cache
 C:\Users\USER\Desktop\Transly\Backend\TranslyProject\TranslyProject\obj\Debug\net8.0\ref\TranslyProject.dll
+C:\Users\USER\Desktop\Transly\Backend\TranslyProject\TranslyProject\obj\Debug\net8.0\TranslyProject.sourcelink.json

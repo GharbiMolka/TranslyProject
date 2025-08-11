@@ -506,6 +506,27 @@
   },
   {
     "ContainingType": "Transly.Controllers.Api.OffreApiController",
+    "Method": "UpdatePriseEnCharge",
+    "RelativePath": "api/OffreApi/{id}/priseencharge",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "priseEnCharge",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Transly.Controllers.Api.OffreApiController",
     "Method": "UpdateStatut",
     "RelativePath": "api/OffreApi/{id}/statut",
     "HttpMethod": "PATCH",

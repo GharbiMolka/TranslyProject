@@ -125,6 +125,8 @@
       <p><strong>Délai livraison :</strong> {{ offre.delaiLivraison }} jours</p>
       <p><strong>Statut :</strong> {{ offre.statut }}</p>
       <p><strong>Date :</strong> {{ offre.dateOffre | date:'dd/MM/yyyy' }}</p>
+      <p><strong>Prise en charge :</strong> {{ offre.priseEnCharge ?? 'encore pas de réponse' }}</p>
+
 
       <div *ngIf="offre.statut === 'En attente'">
         <ng-container *ngIf="offreEnCoursConfirmation?.id === offre.idOffre; else actionsNormales">

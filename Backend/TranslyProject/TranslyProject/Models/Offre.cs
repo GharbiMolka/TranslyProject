@@ -24,6 +24,8 @@ namespace TranslyProject.Models
         [Required(ErrorMessage = "La date de l'offre est obligatoire.")]
         public DateTime DateOffre { get; set; }
 
+        public string? PriseEnCharge { get; set; }
+
         // Relation avec Demande
         [ForeignKey("Demande")]
         public int Id_Demande { get; set; }

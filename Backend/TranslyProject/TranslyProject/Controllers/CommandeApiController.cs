@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.SignalR;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Security.Claims;
@@ -14,10 +15,12 @@ namespace TranslyProject.Controllers
     public class CommandeApiController : ControllerBase
     {
         private readonly ApplicationDbContext _context;
+        private readonly IHubContext<NotificationHub> _hubContext;
 
-        public CommandeApiController(ApplicationDbContext context)
+        public CommandeApiController(ApplicationDbContext context, IHubContext<NotificationHub> hubContext)
         {
             _context = context;
+            _hubContext = hubContext;
         }
 
         // POST: api/Commande
@@ -51,6 +54,13 @@ namespace TranslyProject.Controllers
 
             _context.Commandes.Add(commande);
             await _context.SaveChangesAsync();
+            var dateNow = DateTime.Now.ToString("dd/MM/yyyy 'à' HH:mm");
+
+            var message = $"Nouvelle commande ajoutée par {user.Prenom}, {user.Nom} le {dateNow}";
+
+            await _hubContext.Clients
+                .Group(NotificationHub.FournisseurGroup)
+                .SendAsync("ReceiveNotification", message);
 
             return Ok(new { message = "Commande ajoutée avec succès", commandeId = commande.Id_Com });
         }
@@ -170,6 +180,18 @@ namespace TranslyProject.Controllers
             commande.Statut = nouveauStatut;
             _context.Commandes.Update(commande);
             await _context.SaveChangesAsync();
+
+            var client = await _context.Users.FindAsync(commande.Id_User);
+            if (client != null)
+            {
+                var message = $"Votre commande #{commande.Id_Com} a été {commande.Statut.ToLower()} par le fournisseur.";
+
+                var groupName = $"client-{client.Id}";
+
+                Console.WriteLine($"[NotificationHub] Envoi au groupe {groupName} : {message}");
+
+                await _hubContext.Clients.Group($"client-{client.Id}").SendAsync("ReceiveClientNotification", message);
+            }
 
             return Ok(new { message = $"Commande {nouveauStatut.ToLower()} avec succès." });
         }

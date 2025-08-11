@@ -27,6 +27,10 @@ h2 {
 .btn-supprimer {
   background-color: #ed1c24; /* Rouge */
 }
+
+.btn-pch {
+  background-color: #1a6d1e; /* blue */
+}
 .btn {
   border: none;
   padding: 8px 14px;

@@ -87,7 +87,8 @@ namespace Transly.Controllers.Api
                 Statut = string.IsNullOrWhiteSpace(dto.Statut) ? "En attente" : dto.Statut,
                 DateOffre = DateTime.Now,
                 Id_Demande = dto.Id_Demande,
-                Id_User = userId
+                Id_User = userId,
+                PriseEnCharge = dto.PriseEnCharge
             };
 
             _context.Offres.Add(offre);
@@ -120,6 +121,7 @@ namespace Transly.Controllers.Api
             existing.PrixPropose = updated.PrixPropose;
             existing.DelaiLivraison = updated.DelaiLivraison;
             existing.Statut = updated.Statut;
+            existing.PriseEnCharge = updated.PriseEnCharge;
 
             _context.Entry(existing).State = EntityState.Modified;
             await _context.SaveChangesAsync();
@@ -163,5 +165,23 @@ namespace Transly.Controllers.Api
 
             return NoContent();
         }
+
+        // PATCH: Modifier uniquement le champ PriseEnCharge
+        [HttpPatch("{id}/priseencharge")]
+        [Authorize]
+        public async Task<IActionResult> UpdatePriseEnCharge(int id, [FromBody] string priseEnCharge)
+        {
+            var offre = await _context.Offres.FindAsync(id);
+            if (offre == null)
+                return NotFound();
+
+            offre.PriseEnCharge = priseEnCharge;
+            await _context.SaveChangesAsync();
+
+            return NoContent();
+        }
     }
+
+
+
 }

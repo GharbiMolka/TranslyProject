@@ -1,9 +1,12 @@
+using Microsoft.AspNetCore.SignalR;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.FileProviders;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using TranslyProject.Data;
+using TranslyProject.Models;
 using TranslyProject.Services;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -44,14 +47,21 @@ builder.Services.AddControllers()
 
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowAngular",
-        builder => builder
-            .WithOrigins("http://localhost:4200") // port de Angular
-            .AllowAnyHeader()
-            .AllowAnyMethod());
+    options.AddPolicy("AllowAngular", policy =>
+    {
+        policy.WithOrigins("http://localhost:4200")
+              .AllowAnyHeader()
+              .AllowAnyMethod()
+              .AllowCredentials();
+    });
 });
 
+
+builder.Services.AddSignalR();
+
 var app = builder.Build();
+
+
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
@@ -64,17 +74,18 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
+app.UseCors("AllowAngular");
 
 app.UseAuthentication(); // JWT auth
 app.UseAuthorization();
 
 app.UseStaticFiles();
 
-
-app.UseCors("AllowAngular");
-
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
+
+app.MapHub<NotificationHub>("/notificationHub");
+
 
 app.Run();

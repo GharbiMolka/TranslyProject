@@ -4,39 +4,96 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Dashboard</title>
-  <link rel="stylesheet" href="dashboardfournisseur.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
   <div class="dashboard">
     <!-- Sidebar -->
     <aside class="sidebar">
-          <img src="assets/logo.png" alt="Transly Logo" />
-           <p style="text-align: center; margin-bottom: 10px;"> Dashboard Fournisseur</p>
-      <nav class="sidebar-nav">
-    <a><i class="fas fa-home"></i>Accueil</a>
-    <a (click)="goToDetailuser()"><i class="fas fa-user"></i> Profil</a>
-    <a (click)="goToCommandeFournisseur()"><i class="fas fa-receipt"></i> Commandes</a>
-    <a (click)="goToListDemande()"><i class="fas fa-truck"></i> Demandes</a>
-<a href="#" class="logout-btn" style="margin-top: 100%;"><i class="fas fa-sign-out-alt"></i> Déconnexion</a>
-      </nav>
+      <div class="sidebar-header">
+        <img src="assets/logo.png" alt="Transly Logo" class="logo"/>
+        <h2>Dashboard Fournisseur</h2>
+      </div>
+      
+  <nav class="sidebar-nav">
+
+  <a class="nav-item" [class.active]="activeItem === 'accueil'" (click)="goToHome()">
+    <i class="fas fa-home"></i>
+    <span>Accueil</span>
+    <div class="active-indicator" *ngIf="activeItem === 'accueil'"></div>
+  </a>
+
+  <a class="nav-item" [class.active]="activeItem === 'profil'" (click)="goToDetailuser()">
+    <i class="fas fa-user-circle"></i>
+    <span>Profil</span>
+    <div class="active-indicator" *ngIf="activeItem === 'profil'"></div>
+  </a>
+
+
+  
+  <a class="nav-item" [class.active]="activeItem === 'commandes'" (click)="goToCommandeFournisseur()">
+    <i class="fas fa-receipt"></i>
+    <span>Commandes</span>
+    <div class="active-indicator" *ngIf="activeItem === 'commandes'"></div>
+  </a>
+
+  <a class="nav-item" [class.active]="activeItem === 'demandes'" (click)="goToListDemande()">
+  <i class="fas fa-truck"></i>
+    <span>Demandes</span>
+    <div class="active-indicator" *ngIf="activeItem === 'demandes'"></div>
+  </a>
+
+  <a class="nav-item">
+    <i class="fas fa-question-circle"></i>
+    <span>Aide</span>
+  </a>
+
+  <div class="sidebar-footer">
+    <a class="logout-btn" href="#">
+      <i class="fas fa-sign-out-alt"></i>
+      <span>Déconnexion</span>
+    </a>
+  </div>
+</nav>
+
     </aside>
 
     <!-- Main content -->
     <div class="main-content">
       <!-- Top navbar -->
       <header class="navbar">
-        <div class="notifications">
-          🔔 <span class="badge">3</span>
+        <div class="search-bar">
+          <i class="fas fa-search"></i>
+          <input type="text" placeholder="Rechercher...">
+        </div>
+        
+<div class="navbar-right" (clickOutside)="hideNotifications()">
+  <div class="notifications" (click)="toggleNotifications()">
+    <i class="fas fa-bell"></i>
+    <span class="badge">{{ notifications.length }}</span>
+
+    <ul class="notification-list" *ngIf="showNotifications && notifications.length > 0">
+      <li *ngFor="let msg of notifications">{{ msg }}</li>
+    </ul>
+  </div>
+
+
+          
+          <div class="user-profile">
+            <img src="assets/useravatar.jpg" alt="User Avatar">
+            <span>{{ userName }}</span>
+            <i class="fas fa-chevron-down"></i>
+          </div>
         </div>
       </header>
 
       <!-- Page content -->
       <section class="content">
-    <router-outlet></router-outlet>
+        <router-outlet></router-outlet>
       </section>
     </div>
   </div>
-
 </body>
 </html>

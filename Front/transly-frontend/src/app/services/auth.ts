@@ -73,7 +73,11 @@ export class AuthService {
     this.clearSession();
     
   }
-
+  
+getUser(): any {
+  const userJson = localStorage.getItem('user'); // ou sessionStorage
+  return userJson ? JSON.parse(userJson) : null;
+}
 
 requestPasswordReset(email: string): Observable<any> {
   return this.http.post(`${this.baseUrl}/request-password-reset`, { email });

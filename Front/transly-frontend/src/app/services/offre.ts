@@ -10,6 +10,7 @@ export interface Offre {
   dateOffre: string;
   id_Demande: number;
   id_User: number;
+  priseEnCharge?: string;
 }
 
 @Injectable({
@@ -59,5 +60,10 @@ updateStatut(idOffre: number, statut: string): Observable<any> {
   });
 }
 
+updatePriseEnCharge(idOffre: number, priseEnCharge: string): Observable<any> {
+  return this.http.patch(`${this.apiUrl}/${idOffre}/priseencharge`, JSON.stringify(priseEnCharge), {
+    headers: { 'Content-Type': 'application/json' }
+  });
+}
 
 }

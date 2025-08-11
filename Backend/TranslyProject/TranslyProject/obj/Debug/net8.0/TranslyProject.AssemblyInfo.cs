@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TranslyProject")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+97d84a7d8c6b8b2bea06696f7716568b071074a4")]
 [assembly: System.Reflection.AssemblyProductAttribute("TranslyProject")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TranslyProject")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

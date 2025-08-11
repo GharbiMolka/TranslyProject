@@ -16,7 +16,7 @@ export class ListOffre implements OnInit {
   offres: Offre[] = [];
   errorMessage = '';
   selectedOffre?: Offre;
-  modalType: 'details' | 'edit' | 'delete' | null = null;
+  modalType: 'details' | 'edit' | 'delete' | 'priseEnCharge' | null = null;
   searchPrix: number | null = null;
   filterDelai: number | null = null;
   filterStatut: string = '';
@@ -42,7 +42,7 @@ export class ListOffre implements OnInit {
     });
   }
 
-  ouvrirModal(offre: Offre, type: 'details' | 'edit' | 'delete') {
+  ouvrirModal(offre: Offre, type: 'details' | 'edit' | 'delete'  | 'priseEnCharge') {
     this.selectedOffre = offre;
     this.modalType = type;
   }
@@ -92,4 +92,27 @@ filteredOffres(): Offre[] {
 
     return prixOK && delaiOK && statutOK && dateOK;
   });
-}}
+}
+
+changerPriseEnCharge(valeur: 'oui' | 'non'): void {
+  if (!this.selectedOffre) return;
+
+  this.offreService.updatePriseEnCharge(this.selectedOffre.idOffre, valeur).subscribe({
+    next: () => {
+      alert(`Prise en charge ${valeur === 'oui' ? 'acceptée' : 'refusée'} avec succès.`);
+      this.fermerModal();
+      // Mettre à jour localement l’objet modifié
+      this.selectedOffre!.priseEnCharge = valeur;
+    },
+    error: err => {
+      console.error(err);
+      alert("Erreur lors de la mise à jour de la prise en charge.");
+    }
+  });
+}
+
+
+
+}
+
+

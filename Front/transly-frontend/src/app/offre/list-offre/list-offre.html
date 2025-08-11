@@ -40,9 +40,26 @@
       <button class="btn btn-details" (click)="ouvrirModal(o, 'details')">Détails</button>
       <button class="btn btn-modifier" (click)="ouvrirModal(o, 'edit')">Modifier</button>
       <button class="btn btn-supprimer" (click)="ouvrirModal(o, 'delete')">Supprimer</button>
+         <!-- ✅ Affichage du bouton si statut est Acceptée -->
+    <button *ngIf="o.statut === 'Acceptée'" class="btn btn-pch" (click)="ouvrirModal(o, 'priseEnCharge')">Prise en charge</button>
     </div>
   </div>
 </div>
+
+
+<!-- ✅ Modal Prise en charge -->
+<div class="modal" [class.show]="modalType === 'priseEnCharge'">
+  <div class="modal-content">
+    <span class="close" (click)="fermerModal()">&times;</span>
+    <h3>Confirmation de prise en charge</h3>
+    <p>Voulez-vous accepter la prise en charge de cette offre ?</p>
+    <div class="buttons">
+      <button (click)="changerPriseEnCharge('oui')">Oui</button>
+      <button (click)="changerPriseEnCharge('non')">Non</button>
+    </div>
+  </div>
+</div>
+
 
 <!-- 🟦 Modal Détails -->
 <div class="modal" [class.show]="modalType === 'details'">

@@ -4448,11 +4448,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\USER\\source\\repos\\TranslyProject\\TranslyProject\\TranslyProject.csproj",
+      "projectUniqueName": "C:\\Users\\USER\\Desktop\\Transly\\Backend\\TranslyProject\\TranslyProject\\TranslyProject.csproj",
       "projectName": "TranslyProject",
-      "projectPath": "C:\\Users\\USER\\source\\repos\\TranslyProject\\TranslyProject\\TranslyProject.csproj",
+      "projectPath": "C:\\Users\\USER\\Desktop\\Transly\\Backend\\TranslyProject\\TranslyProject\\TranslyProject.csproj",
       "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\USER\\source\\repos\\TranslyProject\\TranslyProject\\obj\\",
+      "outputPath": "C:\\Users\\USER\\Desktop\\Transly\\Backend\\TranslyProject\\TranslyProject\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

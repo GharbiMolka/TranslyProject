@@ -48,11 +48,14 @@ export class Login {
     // Appel API
     this.authService.login(this.credentials).subscribe({
       next: (res) => {
+        console.log('Réponse API Login:', res);
         const token = res.token;
         const userId = res.user.id;
         const role = res.user.role;
+        const user = res.user; 
 
         this.authService.setUserSession(userId, role, token);
+        localStorage.setItem('user', JSON.stringify(user));
 
         switch (role) {
           case 'Client':
